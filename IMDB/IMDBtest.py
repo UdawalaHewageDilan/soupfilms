@@ -21,7 +21,7 @@ for item in movie1:
 
     descriptions = item.find_all(class_='text-muted')
 
-    for i in range(0, len(descriptions), 2):
+    for i in range(len(descriptions)):
         description = (descriptions[i].text.replace('Gross:', ''))
     try:
         rating = item.find(class_='certificate').text
